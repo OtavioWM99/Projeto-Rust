@@ -78,6 +78,7 @@ fn main() {
 */
 
 //operadores 
+/* 
 fn main() {
     let a = 10;
     let b = 5;
@@ -90,5 +91,39 @@ fn main() {
     println!("Igual? {}", a == b); // igualdade
     println!("Maior? {}", a > b); // maior que
     println!("Menor? {}", a < b); // menor que
+}
+*/
+
+//estruturas de repetição
+/* 
+fn main() {
+    let mut contador = 0;
+
+    loop { //loop infinito até usar break
+        println!("Contando: {}", contador);
+        contador += 1;
+        if contador == 10 {
+            break;
+        }
+    }
+}
+*/
+
+//while
+/* 
+fn main() {
+    let mut n = 0;
+    while n < 3 {
+        println!("n = {}", n);
+        n += 1;
+    }
+}
+*/
+
+//for
+fn main() {
+    for i in 1..5 { // inclui o 1 e vai até 4
+        println!("i = {}", i);
+    }
 }
 
