@@ -63,6 +63,7 @@ fn main() {
 
 //condicionais
 //usando if, else if e else 
+/* 
 fn main() {
     let idade = 17;
 
@@ -73,5 +74,21 @@ fn main() {
     } else {
         println!("Menor de idade");
     }
+}
+*/
+
+//operadores 
+fn main() {
+    let a = 10;
+    let b = 5;
+
+    println!("Soma: {}", a + b); // soma
+    println!("Diferença: {}", a - b); // subtração
+    println!("Produto: {}", a * b); // multiplicação
+    println!("Divisão: {}", a / b); // divisão
+    println!("Módulo: {}", a % b); // resto da divisão
+    println!("Igual? {}", a == b); // igualdade
+    println!("Maior? {}", a > b); // maior que
+    println!("Menor? {}", a < b); // menor que
 }
 
