@@ -46,6 +46,7 @@ fn main() {
 
 //lendo dados do usuário
 //usando a biblioteca std::io para entrada de dados
+/* 
 use std::io;
 
 fn main() {
@@ -57,5 +58,20 @@ fn main() {
         .expect("Erro ao ler entrada");
 
     println!("Olá, {}", entrada); 
+}
+*/
+
+//condicionais
+//usando if, else if e else 
+fn main() {
+    let idade = 17;
+
+    if idade >= 18 {
+        println!("Maior de idade");
+    } else if idade >= 16 {
+        println!("Pode votar");
+    } else {
+        println!("Menor de idade");
+    }
 }
 
