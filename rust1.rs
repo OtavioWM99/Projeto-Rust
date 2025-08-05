@@ -30,6 +30,7 @@ fn main() {
 
 //tipos de dados
 //Rust é uma linguagem estática e fortemente tipada
+/*
 fn main() {
     let inteiro: i32 = 10;         // número inteiro de 32 bits
     let flutuante: f64 = 3.14;     // ponto flutuante de 64 bits
@@ -40,5 +41,21 @@ fn main() {
     
     println!("int: {}, float: {}, bool: {}, char: {}, texto: {}, string: {}", 
              inteiro, flutuante, booleano, caractere, texto, string);
+}
+*/
+
+//lendo dados do usuário
+//usando a biblioteca std::io para entrada de dados
+use std::io;
+
+fn main() {
+    let mut entrada = String::new();
+    println!("Digite seu nome:");
+
+    io::stdin()
+        .read_line(&mut entrada)
+        .expect("Erro ao ler entrada");
+
+    println!("Olá, {}", entrada); 
 }
 
