@@ -121,9 +121,21 @@ fn main() {
 */
 
 //for
+/* 
 fn main() {
     for i in 1..5 { // inclui o 1 e vai até 4
         println!("i = {}", i);
     }
+}
+*/
+
+//arrays
+fn main() {
+    let array = [1, 2, 3]; // tamanho fixo
+    let mut vetor = vec![10, 20, 30]; // tamanho dinâmico
+
+    println!("Primeiro do array: {}", array[0]);
+    vetor.push(40);
+    println!("Último do vetor: {}", vetor[vetor.len() - 1]);
 }
 
