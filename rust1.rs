@@ -142,6 +142,7 @@ fn main() {
 */
 
 //strings
+/*
 fn main() {
     let mut nome = String::from("Rust");
     nome.push_str ("Lang"); // concatena
@@ -150,5 +151,21 @@ fn main() {
     let tamanho = nome.len();
     println!("Tamanho: {}", tamanho);
 
+}
+*/
+
+//funções
+fn saudacao(nome: &str) {
+    println!("Olá, {}", nome);
+}
+
+fn soma(a: i32, b: i32) -> i32 {
+    a + b
+}
+
+fn main() {
+    saudacao("Jonas");
+    let resultado = soma(5, 7);
+    println!("Resultado da soma: {}", resultado);
 }
 
