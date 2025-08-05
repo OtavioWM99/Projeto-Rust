@@ -130,6 +130,7 @@ fn main() {
 */
 
 //arrays
+/* 
 fn main() {
     let array = [1, 2, 3]; // tamanho fixo
     let mut vetor = vec![10, 20, 30]; // tamanho dinâmico
@@ -137,5 +138,17 @@ fn main() {
     println!("Primeiro do array: {}", array[0]);
     vetor.push(40);
     println!("Último do vetor: {}", vetor[vetor.len() - 1]);
+}
+*/
+
+//strings
+fn main() {
+    let mut nome = String::from("Rust");
+    nome.push_str ("Lang"); // concatena
+    println!("{}", nome); // RustLang
+
+    let tamanho = nome.len();
+    println!("Tamanho: {}", tamanho);
+
 }
 
