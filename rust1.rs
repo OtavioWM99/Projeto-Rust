@@ -155,6 +155,7 @@ fn main() {
 */
 
 //funções
+/* 
 fn saudacao(nome: &str) {
     println!("Olá, {}", nome);
 }
@@ -167,5 +168,32 @@ fn main() {
     saudacao("Jonas");
     let resultado = soma(5, 7);
     println!("Resultado da soma: {}", resultado);
+}
+*/
+
+struct Pessoa {
+    nome: String,
+    idade: u8,
+}
+
+impl Pessoa {
+    fn saudacao(&self) {
+        println!("Olá, meu nome é {}", self.nome);
+    }
+
+    fn aniversario(&mut self) {
+        self.idade += 1;
+    }
+}
+
+fn main() {
+    let mut p = Pessoa {
+        nome: String::from("Otávio"),
+        idade: 20,
+    };
+
+    p.saudacao();
+    p.aniversario();
+    println!("Nova idade: {}", p.idade);
 }
 
