@@ -319,6 +319,7 @@ fn main () {
 }
 */
 
+/* 
 trait Falavel {
     fn falar(&self);
 }
@@ -350,6 +351,7 @@ struct Pessoa {
 fn fazer_falar<T: Falavel>(animal: &T) {
     animal.falar();
 }
+*/
 
 //Polimorfismo estático com generics e bounds:
 /* 
@@ -363,7 +365,7 @@ fn main() {
 
 //Polimorfismo dinâmico com trait objects:
 // Usando trait objects para permitir diferentes tipos de animais falantes
-
+/* 
 fn fazer_falar_dinamico(animal: &dyn Falavel) {
     animal.falar();
 }
@@ -376,5 +378,33 @@ fn main() {
     for a in lista {
         fazer_falar_dinamico(a);
     }
+}
+*/
+
+// Tratamento de erros com Result e Option
+// Result é usado para operações que podem falhar, enquanto Option é usado para valores que podem ou não existir
+// Result<T, E> é usado para operações que podem falhar, onde T é o tipo de sucesso e E é o tipo de erro
+use std::num::ParseIntError;
+
+fn converter_para_inteiro(s: &str) -> Result<i32, ParseIntError> {
+    s.trim().parse::<i32>()
+}
+
+fn main() {
+    match converter_para_inteiro("42") {
+        Ok(n) => println!("Número válido: {}", n),
+        Err(e) => println!("Erro ao converter: {}", e),
+    }
+
+    // Usando operador `?` dentro de outra função que retorna Result
+    if let Err(e) = funcao_que_chama() {
+        println!("Erro propagado: {}", e);
+    }
+}
+
+fn funcao_que_chama() -> Result<(), ParseIntError> {
+    let x = converter_para_inteiro("100")?; // se falhar, retorna o erro
+    println!("Valor: {}", x);
+    Ok(())
 }
 
