@@ -256,7 +256,8 @@ fn main() {
 }
 */
 
-// instanciando uma struct
+// Instanciando uma struct
+/* 
 struct ContaBancaria {
     titular: String,
     saldo: f64, // atributo
@@ -271,4 +272,50 @@ fn main() {
     println!("Titular: {}", conta.titular);
     println!("Saldo: {}", conta.saldo);
 }
+*/
+
+// Definindo traits e implementando para structs
+// Traits são como interfaces em outras linguagens
+/*
+fn main () {
+
+    Cachorro {
+        nome: String::from("Dog"),
+    }.falar();
+
+    trait Falavel {
+        fn falar(&self);
+    }
+
+    struct Cachorro {
+        nome: String,
+    }
+
+    impl Falavel for Cachorro {
+        fn falar(&self) {
+            println!("{} diz: Au au!", self.nome);
+        }
+    }
+
+    struct Gato {
+        nome: String,
+    }
+
+    impl Falavel for Gato {
+        fn falar(&self) {
+            println!("{} diz: Miau!", self.nome);
+        }
+    }
+
+    struct Endereco {
+        rua: String,
+        cidade: String,
+    }
+
+    struct Pessoa {
+        nome: String,
+        endereco: Endereco, // composition
+    }
+}
+*/
 
