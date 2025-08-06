@@ -202,7 +202,7 @@ fn main() {
 */
 
 // Definição de "classe" Pessoa
-
+/* 
 fn main() {
     let pessoa = Pessoa {
         nome: String::from("Jonas"),
@@ -221,5 +221,36 @@ impl Pessoa {
     fn saudacao(&self) {
         println!("Olá, meu nome é {} e tenho {} anos.", self.nome, self.idade);
     }
+}
+*/
+
+//atributos são campos da struct
+/* 
+struct ContaBancaria {
+    titular: String,
+    saldo: f64, // atributo
+}
+*/
+
+//exemplo com struct, atributos, métodos e "construtor"
+struct Retangulo {
+    largura: u32,
+    altura: u32,
+}
+
+impl Retangulo {
+    // "Construtor"
+    fn new(largura: u32, altura: u32) -> Self {
+        Self { largura, altura }
+    }
+
+    fn area(&self) -> u32 {
+        self.largura * self.altura
+    }
+}
+
+fn main() {
+    let r = Retangulo::new(10, 5);
+    println!("Área: {}", r.area());
 }
 
