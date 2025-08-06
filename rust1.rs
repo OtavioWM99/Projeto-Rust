@@ -171,6 +171,9 @@ fn main() {
 }
 */
 
+//métodos
+//métodos são funções associadas a structs ou enums
+/* 
 struct Pessoa {
     nome: String,
     idade: u8,
@@ -195,5 +198,28 @@ fn main() {
     p.saudacao();
     p.aniversario();
     println!("Nova idade: {}", p.idade);
+}
+*/
+
+// Definição de "classe" Pessoa
+
+fn main() {
+    let pessoa = Pessoa {
+        nome: String::from("Jonas"),
+        idade: 30,
+    };
+
+    pessoa.saudacao(); // Chama o método saudacao
+}
+struct Pessoa {
+    nome: String,
+    idade: u8,
+}
+
+impl Pessoa {
+    // Método (comportamento)
+    fn saudacao(&self) {
+        println!("Olá, meu nome é {} e tenho {} anos.", self.nome, self.idade);
+    }
 }
 
