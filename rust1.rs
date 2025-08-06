@@ -233,6 +233,7 @@ struct ContaBancaria {
 */
 
 //exemplo com struct, atributos, métodos e "construtor"
+/* 
 struct Retangulo {
     largura: u32,
     altura: u32,
@@ -252,5 +253,22 @@ impl Retangulo {
 fn main() {
     let r = Retangulo::new(10, 5);
     println!("Área: {}", r.area());
+}
+*/
+
+// instanciando uma struct
+struct ContaBancaria {
+    titular: String,
+    saldo: f64, // atributo
+}
+
+fn main() {
+    let conta = ContaBancaria {
+        titular: String::from("Jonas"),
+        saldo: 1000.0,
+    };
+
+    println!("Titular: {}", conta.titular);
+    println!("Saldo: {}", conta.saldo);
 }
 
