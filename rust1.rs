@@ -319,3 +319,62 @@ fn main () {
 }
 */
 
+trait Falavel {
+    fn falar(&self);
+}
+struct Cachorro {
+    nome: String,
+}
+impl Falavel for Cachorro {
+    fn falar(&self) {
+        println!("{} diz: Au au!", self.nome);
+    }
+}
+struct Gato {
+    nome: String,
+}
+impl Falavel for Gato {
+    fn falar(&self) {
+        println!("{} diz: Miau!", self.nome);
+    }
+}
+struct Endereco {
+    rua: String,
+    cidade: String,
+}
+struct Pessoa {
+    nome: String,
+    endereco: Endereco, // composition
+}
+
+fn fazer_falar<T: Falavel>(animal: &T) {
+    animal.falar();
+}
+
+//Polimorfismo estático com generics e bounds:
+/* 
+fn main() {
+    let dog = Cachorro { nome: "Dog".into() };
+    let gato = Gato { nome: "Cat".into() };
+    fazer_falar(&dog);
+    fazer_falar(&gato);
+}
+*/
+
+//Polimorfismo dinâmico com trait objects:
+// Usando trait objects para permitir diferentes tipos de animais falantes
+
+fn fazer_falar_dinamico(animal: &dyn Falavel) {
+    animal.falar();
+}
+
+fn main() {
+    let dog = Cachorro { nome: "Dog".into() };
+    let gato = Gato { nome: "Cat".into() };
+
+    let lista: Vec<&dyn Falavel> = vec![&dog, &gato];
+    for a in lista {
+        fazer_falar_dinamico(a);
+    }
+}
+
